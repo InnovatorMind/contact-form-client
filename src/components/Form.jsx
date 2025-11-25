@@ -46,7 +46,9 @@ const Form = () => {
 
     // If valid → send to backend
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/submit-form`, {
+      const API_BASE = import.meta.env.VITE_API_URL;
+      console.log(API_BASE);
+      const response = await fetch(`https://contact-form-server-ii0u.onrender.com/api/submit-form`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
